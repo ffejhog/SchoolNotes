@@ -1,0 +1,358 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+ \geometry{margin=1in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Brief Article}
+\author{The Author}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+\everymath{\displaystyle}
+\begin{document}
+\section{Special Limits}
+\begin{math}
+\lim_{x \to 0} \frac{\sin x}{x}=1 \\
+\\
+\lim_{x \to 0} \frac{1- \cos x}{x}=0
+\\
+\end{math}
+\section{Special Derivatives}
+\begin{math}
+\frac{\mathrm{d} [\sin x]}{\mathrm{d} x} = \cos x \\
+\\
+\frac{\mathrm{d} [\cos x]}{\mathrm{d} x} = - \sin x \\
+\\
+\frac{\mathrm{d} [\tan x]}{\mathrm{d} x} = \sec^{2} x \\
+\\
+\frac{\mathrm{d} [\sec x]}{\mathrm{d} x} = \sec x \tan x \\
+\\
+\frac{\mathrm{d} [\cot x]}{\mathrm{d} x} = - \csc^{2} x \\
+\\
+\frac{\mathrm{d} [\csc x]}{\mathrm{d} x} = - \csc x \cot x \\
+\\
+\frac{\mathrm{d} [arcsin x]}{\mathrm{d} x} =  \frac{1}{\sqrt{1-x^{2}}} \\
+\\
+\frac{\mathrm{d} [arccos x]}{\mathrm{d} x} = - \frac{1}{\sqrt{1-x^{2}}} \\
+\\
+\frac{\mathrm{d} [arctan x]}{\mathrm{d} x} =  \frac{1}{{1-x^{2}}} \\
+\\
+\frac{\mathrm{d} [arccot x]}{\mathrm{d} x} = - \frac{1}{{1-x^{2}}} \\
+\\
+\frac{\mathrm{d} [arcsec x]}{\mathrm{d} x} =  \frac{1}{\left | x \right |\sqrt{1-x^{2}}} \\
+\\
+\frac{\mathrm{d} [arccsc x]}{\mathrm{d} x} = - \frac{1}{\left | x \right |\sqrt{1-x^{2}}} \\
+\\
+\frac{\mathrm{d} [\ln x]}{\mathrm{d} x} = \frac{1}{x} \\
+\\
+\frac{\mathrm{d} [\log_{a} x]}{\mathrm{d} x} = \frac{1}{x\ln a} \\
+\\
+\frac{\mathrm{d} [e^{x}]}{\mathrm{d} x} = e^{x} \\
+\\
+\frac{\mathrm{d} [a^{x}]}{\mathrm{d} x} = a^{x}\ln a \\
+\\
+\end{math}
+
+\section{Trig Rules}
+\begin{math}
+\int \tan x = \ln\left | \sec x \right | + c \\
+\\
+\int \sec x = \ln\left | \sec x + \tan x \right | + c \\
+\\
+\sin A \cos B = \frac{1}{2}[\sin(A-B) + \sin(A+B)] \\
+\\
+\sin A \sin B = \frac{1}{2}[\cos(A-B)-\cos(A+B)] \\
+\\
+\cos A \cos B = \frac{1}{2}[\cos(A-B)+\cos(A+B)] \\
+\\
+\sin^{2}x + \cos^{2}x = 1 \\
+\\
+\tan^{2}x +1 = \sec^{2}x \\
+\\
+\sin^{2}x = \frac{1}{2}(1-\cos 2x) \\
+\\
+\cos^{2}x = \frac{1}{2}(1+\cos 2x) \\
+\\
+\sin 2x = 2\sin x \cos x
+\end{math}
+\section{Trig Integrals}
+\begin{math}
+\int \sin^{m} x\cos^{n} x \\
+\end{math}
+1. If n is odd 
+\begin{math} 
+\rightarrow u=\sin x 
+\end{math} \\
+2. If m is odd
+\begin{math} 
+\rightarrow u=\cos x
+\end{math} \\
+3. If  n and m are even
+\begin{math} 
+\rightarrow 
+\end{math}
+Double Angle Formula \\
+\\
+\begin{math}
+\int \tan^{m} x\sec^{n} x
+\end{math} \\
+1. If m is odd
+\begin{math} 
+\rightarrow u=\sec x
+\end{math} \\
+2. If n is even
+\begin{math} 
+\rightarrow u=\tan x
+\end{math} \\
+\section{Trig Substitution Rules}
+\begin{math}
+\int \sqrt {a^{2}-x^{2}} \rightarrow \sin \theta \\
+\\
+\int \sqrt {x^{2}-a^{2}} \rightarrow \sec \theta \\
+\\
+\int \sqrt {x^{2}+a^{2}} \rightarrow \tan \theta \\
+\end{math}
+\section{Improper Integrals}
+\begin{math}
+\int_{a}^{\infty } f(x) = \lim_{b \to \infty}\int_{a}^{b} f(x)
+\end{math}
+\section{Arc Length}
+Cartisan \\
+\\
+\begin{math}
+\int_{a}^{b} \sqrt{1+\left ( \frac{\mathrm{d} y}{\mathrm{d} x} \right )^{2}} \mathrm{d} x 
+\end{math} \\
+\\
+\\
+Parametric \\
+\\
+\begin{math}
+\int_{a}^{b} \sqrt{\left ( \frac{\mathrm{d} x}{\mathrm{d} t} \right )^{2}+\left ( \frac{\mathrm{d} y}{\mathrm{d} t} \right )^{2}} \mathrm{d} t 
+\end{math} \\
+\\
+\\
+Polar \\
+\\
+\begin{math}
+\int_{a}^{b} \sqrt{\left ( \frac{\mathrm{d} r}{\mathrm{d} \theta} \right )^{2}+r^{2}} \, \mathrm{d} \theta
+\end{math} \\
+\section{Area of Surface of Revolution}
+\begin{math}
+\int_{a}^{b}2\pi r \mathrm{ds}
+\end{math} \\
+\\
+r 
+\begin{math}
+\rightarrow
+\end{math}
+Radius (Could be an equation or a single variable) \\
+ds
+\begin{math}
+\rightarrow
+\end{math}
+The Arc Length function (changes depending on type of equation given, eg. Parametric, Polar(see Section 7))
+\section{Parametric Equations}
+Tangent horizontal when 
+\begin{math}
+\frac{\mathrm{d} y}{\mathrm{d} x} =0
+\end{math} \\
+Tangent vertical when 
+\begin{math}
+\frac{\mathrm{d} y}{\mathrm{d} x} = \mathrm{undef \, or} \, \infty
+\end{math}
+\\
+\begin{math}
+\mathrm{if} \, y=f(x)\, \mathrm{then} \left\{
+\begin{array}{c l}     
+    x=t\\
+    y=f(x)
+\end{array}\right. \\
+\end{math}
+\begin{math}
+\frac{{y}'(t)}{{x}'(t)} = \frac{\frac{\mathrm{d} y}{\mathrm{d} t}}{\frac{\mathrm{d} x}{\mathrm{d} t}} \\
+\\
+\frac{\mathrm{d} ^{2} y}{\mathrm{d} x} = \frac{\mathrm{d} \left (\frac{\mathrm{d} y}{\mathrm{d} t}/{\frac{\mathrm{d} x}{\mathrm{d} t}} \right )}{\mathrm{d} x} \\
+\end{math}
+Area under parametric curve
+\begin{math}
+\int_{a}^{b} g(t){f}'(t) \mathrm{d}t
+\end{math} \\
+\section{Polar Equations}
+Polar to Cartisan \\
+\\
+\begin{math}
+\left\{
+\begin{array}{c l}     
+    x=r\cos \theta \\
+    y=r\sin \theta
+\end{array}\right. \\
+\end{math} \\
+\\
+Cartisan to Polar \\
+\\
+\begin{math}
+\left\{
+\begin{array}{c l}     
+    r^{2} = x^{2} + y^{2} \\
+    \theta = tan^{-1}\left ( \frac{y}{x} \right )
+\end{array}\right. \\
+\end{math} \\
+\\
+Area of a polar curve \\
+\\
+\begin{math}
+\int_{a}^{b} \frac{1}{2}[f(\theta)]^{2} \, \mathrm{d}\theta \\
+\end{math}
+\section{Series}
+\subsection{P-Series}
+\begin{math}
+\sum_{n=1}^{\infty}\frac{1}{n^{p}} 
+\left\{
+\begin{array}{c l}     
+    \, p>1 \,\,\, \mathrm{Converges} \\
+    p\leq 1 \,\,\, \mathrm{Diverges}
+\end{array}\right. \\
+\end{math}
+\subsection{Geometric Series}
+\begin{math}
+a,ar,ar^{2},... \sum_{n=1}^{\infty}ar^{n-1} 
+\left\{
+\begin{array}{c l}     
+    -1<r<1 \,\,\, \mathrm{converges\, at} \,\, \frac{a}{1-r} \\
+    \mathrm{otherwise} \,\,\, \mathrm{diverges} 
+\end{array}\right. \\
+\end{math} \\
+\\
+Partial sum for geometric series\\
+\\
+\begin{math}
+s_{n}=\frac{a(1-r^{n})}{1-r}
+\end{math}
+\subsection{Limit Test}
+\begin{math}
+\mathrm{if}\, \lim_{n\to \infty}\neq 0 \,\, \mathrm{then} \, \sum_{n=1}^{\infty}a_{n} \, \mathrm{diverges} \\
+\end{math}
+\subsection{Integral Test}
+\begin{math}
+a_{n} = f(n)
+\end{math}
+\, where f is \\
+1. Continuous \\
+2. Positive \\
+3. Decreasing \\
+\begin{math}
+\mathrm{Then} \, \sum_{n=1}^{\infty}a_{n} \, \mathrm{converges\, iff} \, \int_{1}^{\infty}f(x)\mathrm{d}x \, \mathrm{converges} \\
+\end{math}
+\subsection{Comparison Test}
+Suppose
+\begin{math}
+a_{n}>b_{n}>0 \mathrm{\, for\, all\,} n\geq 1\\
+\\
+\mathrm{if} \, \sum_{n=1}^{\infty}a_{n} \, \mathrm{converges\, then} \, \sum_{n=1}^{\infty}b_{n} \, \mathrm{converges} \\
+\mathrm{if} \, \sum_{n=1}^{\infty}b_{n} \, \mathrm{diverges\, then} \, \sum_{n=1}^{\infty}a_{n} \, \mathrm{diverges} \\
+\end{math} \\
+if 
+\begin{math}
+\lim_{n\to \infty} \frac{a_{n}}{b_{n}}= 
+\end{math}
+(a positive number)
+then \,
+\begin{math}
+\sum_{n=1}^{\infty}a_{n} \, \mathrm{and} \, \sum_{n=1}^{\infty}b_{n} \,
+\end{math}
+have the same convergence/divergence
+\subsection{Alternating Series Test}
+\begin{math}
+\sum_{n=1}^{\infty}(-1)^{n-1} a_{n} \ \mathrm{where} \ a_{n}>0 \\
+\\
+\mathrm{1. \ if} \ a_{n} \mathrm{is \ decreasing} \\
+\mathrm{2. \ } \lim_{n\to \infty} a_{n}=0 \\
+\\
+\mathrm{then \ } \sum_{n=1}^{\infty}(-1)^{n-1} a_{n} \mathrm{ \ is \ convergent \ }
+\end{math}
+\subsection{Ratio Test/Root Test}
+Let 
+\begin{math}
+L=\lim_{n\to \infty}\left | \frac{b_{n}+1}{b_{n}} \right | \\
+\end{math}
+\\
+Let 
+\begin{math}
+L=\lim_{n\to \infty} \sqrt[n]{\left | b_{n} \right |}
+\end{math} \\
+if $L<1$ Series is absolutly convergent \\
+if $L>1$(or $\infty$) Series is divergent \\
+if $L=1$ Test is inconclusive
+\subsection{Taylor and Maclaurin Series}
+Taylor Series \\
+\\
+$f(x)=\sum_{n=0}^{\infty}\frac{f^{n\mathrm{(\leftarrow derivative)}}(a)}{n!}(x-a)^{n} \ \mathrm{for} \ \left | a-x \right | < R$ \\
+\\
+Maclaurin Series \\
+\\
+$f(x)=\sum_{n=0}^{\infty} \frac{f^{n\mathrm{(\leftarrow derivative)}}(0)}{n!}(x)^{n}$ \\
+\section{Misc Rules}
+\begin{math}
+\int \frac{1}{a^{2}+x^{2}} = \frac{1}{a}\tan^{-1}\frac{x}{a} \\
+\\
+\tan^{-1}\infty = \frac{\pi}{2} \\
+\\
+\tan^{-1}-\infty = -\frac{\pi}{2} \\
+\end{math}
+\\
+To find the intersection points between two curves, set them equal to each other \\
+\\
+Area between two curves is top curve minus bottom curve \\
+\\
+\end{document}
