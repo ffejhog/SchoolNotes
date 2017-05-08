@@ -1,3 +1,4 @@
+# Integral Calculus Final Notes
 ## Special Limits
 $$
 \begin{aligned}
